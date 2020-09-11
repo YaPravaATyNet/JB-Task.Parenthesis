@@ -35,12 +35,12 @@ class Converter {
         if (str.length % 2 == 0) {
             if (parenInMiddle) {
                 builder.append(openBkt())
-                decreaseIndex()
             } else {
                 middle++
                 builder.append(str[middle])
             }
         }
+        decreaseIndex()
         for (i in middle + 1 until str.length) {
             builder.append(closeBkt())
             builder.append(str[i])
